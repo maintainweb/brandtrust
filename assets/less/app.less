@@ -8,7 +8,15 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+  background-color: #2C2C2C;
+}
+
+.wrap {
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+
 body.home {
   .page-header {
     display: none;
@@ -16,11 +24,18 @@ body.home {
   .wp-video {
     margin-top: 40px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 aside.sidebar {
   margin-top: 42px;
+}
+
+.container {
+  width: 970px!important;
+  max-width: none !important;
 }
 
 
@@ -35,17 +50,15 @@ aside.sidebar {
    }
 }
 
-.navbar {
-   margin-bottom: 0;
-}
-
  #header-image {
    -moz-box-shadow:    inset 0 0 10px rgba(0,0,0,0.2);
    -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
    box-shadow:         inset 0 0 10px rgba(0,0,0,0.2);
-  height: 300px;
+  height: 85px;
   display: block;
-  width: 100%;
+  border-bottom: 17px solid @brand-primary;
+  margin-left: -15px;
+  margin-right: -15px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -55,27 +68,46 @@ aside.sidebar {
    Header
    ========================================================================== */
 
-.banner { }
+.banner {
+  background-color: #5D5D5D;
+  border-top: 10px solid @brand-primary;
+  margin-left: -15px;
+  margin-right: -15px;
+  .nav {
+    background-color: #404040;
+  }
+}
 
 #menu-primary-navigation {
-   font-size: 18px;
-}
-
-.navbar-brand {
-   background-image: url(/wp-content/uploads/brandtrust-logo.png);
-   background-repeat: no-repeat;
-   background-position: left center;
-   background-size: contain;
-   padding-left: 70px;
-   padding-right: 30px;
-   margin-left: 0!important;
-   margin-right: 40px;
-   font-weight: bold;
+   font-size: 12px;
    text-transform: uppercase;
-   text-indent: -9999px;
-   width: 240px;
+   font-weight: bold;
+   a {
+    color: #fff;
+    &:hover {
+      color: @brand-primary;
+    }
+  }
 }
 
+    .dropdown-menu {
+      margin-top: 0!important;
+      border: 0!important;
+      a {
+        color: @gray-dark;
+      }
+    }
+
+.navbar-header {
+  padding-left: 40px;
+  .navbar-brand {
+     background-image: url(/wp-content/uploads/template_zen_sub_logo.gif);
+     background-repeat: no-repeat;
+     background-position: left center;
+     text-indent: -9999px;
+     width: 127px;
+  }
+}
 /* ==========================================================================
    Content
    ========================================================================== */
@@ -120,10 +152,9 @@ aside.sidebar {
    ========================================================================== */
 
 .content-info {
-   background-color: #ccc;
-   min-height: 350px;
-   margin-top: 30px;
-   padding-top: 30px;
+  .container {
+    background-color: @brand-primary;
+  }
 }
 
 
