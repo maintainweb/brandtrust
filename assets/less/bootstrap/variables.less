@@ -1,7 +1,8 @@
-// Cosmo 3.1.1
-// Variables
-// --------------------------------------------------
-
+@font-face
+{
+font-family: proximanova;
+src: url(http://brandtrust.maintainweb.co/wp-content/themes/brandtrust/assets/fonts/ProximaNovaCond-Light.otf);
+}
 
 //== Colors
 //
@@ -39,11 +40,12 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Open Sans", Calibri, Candara, Arial, sans-serif;
+@font-family-sans-serif:  proximanova, "Open Sans", Calibri, Candara, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
+@font-family-secondary:   Verdana, Arial, sans-serif;
 
 @font-size-base:          13px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px

@@ -10,6 +10,9 @@
 
 body {
   background-color: #2C2C2C;
+  p {
+    font-family: @font-family-secondary;
+  }
 }
 
 .wrap {
@@ -39,6 +42,8 @@ body.home {
     min-height: 400px; 
   }
 }
+
+
 
 .container {
   width: 970px!important;
@@ -89,6 +94,7 @@ body.home {
    font-size: 12px;
    text-transform: uppercase;
    font-weight: bold;
+   font-family: @font-family-secondary;
    a {
     color: #fff;
     &:hover {
@@ -127,7 +133,38 @@ body.home {
    Primary Content
    ========================================================================== */
 
-.main { }
+.main {
+  padding-left: 30px;
+  padding-right: 30px;
+  .wp-video {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+body.single-team {
+  h1.entry-title {
+    margin-bottom: 0;
+    &:first-child {
+      color: @brand-primary!important;
+    }
+  }
+  .job-title {
+    margin-top: 0;
+    font-size: 18px;
+    color: #666;
+  }
+}
+
+.side-quote {
+  font-size: 22px;
+  line-height: 29px;
+  font-weight: 300;
+  color: #808080;
+}
+
+
 
 /* Gallery Shortcode */
 .gallery-row { padding: 15px 0; }
@@ -176,7 +213,26 @@ body.home {
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
+.copyright {
+  p {
+    color: #fff;
+    margin: 8px;
+  }
+}
 
+body.page-template-template-team-php {
+  .main {
+    .col-sm-2 {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+      &:nth-of-type(6n+1) {
+        clear: left;
+      }
+    }
+  }
+}
 
 /* ==========================================================================
    Media Queries
