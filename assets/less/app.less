@@ -10,14 +10,20 @@
 
 body {
   background-color: #2C2C2C;
+  .wrap {
+    background-color: #fff;
+    padding-bottom: 60px;
+  }
   p {
     font-family: @font-family-secondary;
   }
 }
 
-.wrap {
-  background-color: #fff;
-  padding-bottom: 60px;
+@home-content-width: 780px;
+.home-content {
+  width: @home-content-width;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body.home {
@@ -27,29 +33,34 @@ body.home {
   .wp-video {
     margin-top: 40px;
     margin-bottom: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    .home-content;
+  }
+  p {
+    .home-content;
+  }
+  .sharedaddy {
+    .home-content;
+    h3.sd-title:before {
+      border-top: 0;
+    }
   }
 }
-
-.sidebar-wrapper {
-  position: relative;
-  min-height: 400px; 
-  background-color: #F7F7F7;
-  border-left: 1px solid #EAEAEA;
-  aside.sidebar {
-    position: absolute;
-    min-height: 400px; 
-  }
-}
-
-
 
 .container {
   width: 970px!important;
   max-width: none !important;
 }
 
+.sidebar-wrapper {
+  position: relative;
+  min-height: 400px;
+  background-color: #F7F7F7;
+  border-left: 1px solid #EAEAEA;
+  aside.sidebar {
+    position: absolute;
+    min-height: 400px;
+  }
+}
 
 .related-videos {
    margin-left: 0;
