@@ -1,7 +1,13 @@
-<header class="banner container" role="banner">
+<header class="banner" role="banner">
   <div class="row">
     <div class="col-lg-12">
-      <a class="brand" href="<?php echo home_url('/') ?>"><?php bloginfo('name'); ?></a>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="<?php echo home_url(); ?>/"><?php bloginfo('name'); ?></a>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
       <nav class="nav-main" role="navigation">
         <?php
           if (has_nav_menu('primary_navigation')) :

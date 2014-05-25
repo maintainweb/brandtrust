@@ -3,7 +3,7 @@
  * Enable theme features
  */
 add_theme_support('root-relative-urls');    // Enable relative URLs
-add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's top navbar
+//add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's top navbar
 add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
 add_theme_support('nice-search');           // Enable /?s= to /search/ redirect
 add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
@@ -56,9 +56,6 @@ function roots_display_sidebar() {
     array(
       'is_404',
       'is_front_page',
-      'is_single',
-      'is_page',
-      'is_archive',
       'is_category'
     ),
     /**

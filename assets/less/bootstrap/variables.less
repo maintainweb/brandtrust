@@ -1,7 +1,8 @@
-// Cosmo 3.1.1
-// Variables
-// --------------------------------------------------
-
+@font-face
+{
+font-family: proximanova;
+src: url(http://brandtrust.maintainweb.co/wp-content/themes/brandtrust/assets/fonts/ProximaNovaCond-Light.otf);
+}
 
 //== Colors
 //
@@ -25,9 +26,9 @@
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-@body-bg:               #fff;
+@body-bg:               #2C2C2C;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            #929292;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -39,13 +40,14 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Open Sans", Calibri, Candara, Arial, sans-serif;
+@font-family-sans-serif:  proximanova, "Open Sans", Calibri, Candara, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
+@font-family-secondary:   Verdana, Arial, sans-serif;
 
-@font-size-base:          15px;
+@font-size-base:          13px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
@@ -102,7 +104,7 @@
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
 //** Global background color for active items (e.g., navs or dropdowns).
-@component-active-bg:       @brand-primary;
+@component-active-bg:       @gray-dark;
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 @caret-width-base:          4px;
@@ -206,7 +208,7 @@
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-@dropdown-bg:                    #fff;
+@dropdown-bg:                    @gray-dark;
 //** Dropdown menu `border-color`.
 @dropdown-border:                rgba(0,0,0,.15);
 //** Dropdown menu `border-color` **for IE8**.
@@ -217,12 +219,12 @@
 //** Dropdown link text color.
 @dropdown-link-color:            @gray-dark;
 //** Hover color for dropdown links.
-@dropdown-link-hover-color:      #fff;
+@dropdown-link-hover-color:      @brand-primary;
 //** Hover background for dropdown links.
 @dropdown-link-hover-bg:         @dropdown-link-active-bg;
 
 //** Active dropdown menu item text color.
-@dropdown-link-active-color:     #fff;
+@dropdown-link-active-color:     @brand-primary;
 //** Active dropdown menu item background color.
 @dropdown-link-active-bg:        @component-active-bg;
 
@@ -389,12 +391,12 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         @gray-darker;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
 
-@nav-open-link-hover-color:                 #fff;
+@nav-open-link-hover-color:                 @brand-primary;
 
 //== Tabs
 @nav-tabs-border-color:                     #ddd;
