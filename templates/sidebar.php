@@ -5,5 +5,8 @@
 	get_template_part('templates/content', 'quote');
 } ?>
 <?php if (is_singular('client')) {
-	get_template_part('templates/sidebar', 'client');
+  get_template_part('templates/sidebar', 'client');
+} ?>
+<?php if (is_singular('page')) {
+  get_template_part('templates/sidebar', 'items');
 } ?>
