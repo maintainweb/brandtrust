@@ -27,9 +27,9 @@
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
-        <div class="sidebar-outer-wrapper">
-          <div class="sidebar-wrapper <?php echo roots_sidebar_class(); ?>">
-            <aside class="sidebar" role="complementary">
+        <div class="sidebar-outer-wrapper <?php echo roots_sidebar_class(); ?>" role="complementary">
+          <div class="sidebar-wrapper col-sm-12">
+            <aside class="sidebar">
               <?php include roots_sidebar_path(); ?>
             </aside><!-- /.sidebar -->
           </div>
