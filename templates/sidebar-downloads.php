@@ -1,7 +1,7 @@
 <?php
 global $post;
 
-$posts = get_field('sidebar_items');
+$posts = get_field('download_items');
 
 if( $posts ): ?>
     <ul>
@@ -11,18 +11,13 @@ if( $posts ): ?>
           $linktext = get_field('link_text');
           $shortexcerpt = get_field('short_excerpt');
           if( empty($linktext) ) {
-            $linktext = "Learn more";
+            $linktext = "Download pdf now";
           }
         ?>
         <li>
             <div class="sidebar-thumbnail-wrapper">
               <a href="<?php the_permalink(); ?>">
-              <?php
-                if ( has_post_thumbnail() ) {
-                  the_post_thumbnail();
-                }
-                ?>
-              </a>
+              <?php get_template_part('templates/content', 'thumbnail-image'); ?>
               <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
             </div>
             <p><?php echo $shortexcerpt; ?></p>
