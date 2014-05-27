@@ -21,16 +21,18 @@
       get_template_part('templates/content', 'header-image');
   ?>
 
-  
+
     <div class="content row">
       <main class="main <?php echo roots_main_class(); ?>" role="main">
         <?php include roots_template_path(); ?>
       </main><!-- /.main -->
       <?php if (roots_display_sidebar()) : ?>
-        <div class="sidebar-wrapper <?php echo roots_sidebar_class(); ?>">
-          <aside class="sidebar" role="complementary">
-            <?php include roots_sidebar_path(); ?>
-          </aside><!-- /.sidebar -->
+        <div class="sidebar-outer-wrapper">
+          <div class="sidebar-wrapper <?php echo roots_sidebar_class(); ?>">
+            <aside class="sidebar" role="complementary">
+              <?php include roots_sidebar_path(); ?>
+            </aside><!-- /.sidebar -->
+          </div>
         </div>
       <?php endif; ?>
     </div><!-- /.content -->
