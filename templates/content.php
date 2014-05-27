@@ -6,4 +6,7 @@
   <div class="entry-summary">
     <?php the_excerpt(); ?>
   </div>
+  <div class="tags">
+     <?php the_tags('Posted in: ', ', ', ''); ?>
+  </div>
 </article>

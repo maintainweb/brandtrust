@@ -1,3 +1,6 @@
+<?php if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb('<p class="breadcrumb">','</p>');
+} ?>
 <?php while (have_posts()) : the_post(); ?>
   <article <?php post_class(); ?>>
     <header>
