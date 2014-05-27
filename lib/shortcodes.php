@@ -31,10 +31,6 @@ function accordion_quicktags() {
 // Hook into the 'admin_print_footer_scripts' action
 add_action( 'admin_print_footer_scripts', 'accordion_quicktags' );
 
-
-
-
-
 // Add Shortcode
 function carousel_shortcode( $atts , $content = null ) {
 
@@ -45,7 +41,14 @@ function carousel_shortcode( $atts , $content = null ) {
       'class' => '',
     ), $atts )
   );
-return '<div id="#' . $id . '" class="carousel slide ' . $class . '" data-ride="carousel"><div class="carousel-inner">' . do_shortcode($content) . '</div></div>';
+return '<div id="#' . $id . '" class="carousel slide ' . $class . '" data-ride="carousel"><div class="carousel-inner"><a class="left carousel-control" href="#'. $id .'" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+<a class="right carousel-control" href="#'. $id .'" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+  <ol class="carousel-indicators">
+      <li data-target="#'. $id .'" data-slide-to="0" class="active"></li>
+      <li data-target="#'. $id .'" data-slide-to="1"></li>
+      <li data-target="#'. $id .'" data-slide-to="2"></li>
+      <li data-target="#'. $id .'" data-slide-to="3"></li>
+    </ol>' . do_shortcode($content) . '</div></div>';
 }
 add_shortcode( 'carousel', 'carousel_shortcode' );
 
