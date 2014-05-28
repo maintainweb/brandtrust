@@ -23,13 +23,18 @@ add_action('widgets_init', 'roots_widgets_init');
  */
 class Roots_Vcard_Widget extends WP_Widget {
   private $fields = array(
+    'image'          => 'Image or Logo',
     'title'          => 'Title (optional)',
     'street_address' => 'Street Address',
     'locality'       => 'City/Locality',
     'region'         => 'State/Region',
     'postal_code'    => 'Zipcode/Postal Code',
     'tel'            => 'Telephone',
-    'email'          => 'Email'
+    'fax'            => 'Fax',
+    'email'          => 'Email',
+    'twitter'        => 'Twitter',
+    'linkedin'       => 'LinkedIn',
+    'facebook'       => 'Facebook'
   );
 
   function __construct() {
@@ -69,11 +74,13 @@ class Roots_Vcard_Widget extends WP_Widget {
     }
 
     echo $before_widget;
-
+    $upload_dir = wp_upload_dir();
     if ($title) {
       echo $before_title, $title, $after_title;
-    }
-  ?>
+    } ?>
+    <?php if (!empty($instance['image'])) { ?>
+    <img class="img-responsive" src="<?php echo $upload_dir['url'] . '/' . $instance['image']; ?>">
+    <?php } ?>
     <p class="vcard">
       <a class="fn org url" href="<?php echo home_url('/'); ?>"><?php bloginfo('name'); ?></a><br>
       <span class="adr">
@@ -82,8 +89,12 @@ class Roots_Vcard_Widget extends WP_Widget {
         <span class="region"><?php echo $instance['region']; ?></span>
         <span class="postal-code"><?php echo $instance['postal_code']; ?></span><br>
       </span>
-      <span class="tel"><span class="value"><?php echo $instance['tel']; ?></span></span><br>
-      <a class="email" href="mailto:<?php echo $instance['email']; ?>"><?php echo $instance['email']; ?></a>
+      <span class="tel">T <span class="value"><?php echo $instance['tel']; ?></span></span><br>
+      <span class="fax">F <span class="value"><?php echo $instance['fax']; ?></span></span><br>
+      <a class="email" href="mailto:<?php echo $instance['email']; ?>"><?php echo $instance['email']; ?></a><br>
+      <?php if (!empty($instance['twitter'])) { ?><a class="twitter" href="<?php echo $instance['twitter']; ?>">Twitter</a><br><?php } ?>
+      <?php if (!empty($instance['linkedin'])) { ?><a class="linkedin" href="<?php echo $instance['linkedin']; ?>">LinkedIn</a><br><?php } ?>
+      <?php if (!empty($instance['facebook'])) { ?><a class="facebook" href="<?php echo $instance['facebook']; ?>">Facebook</a><?php } ?>
     </p>
   <?php
     echo $after_widget;
