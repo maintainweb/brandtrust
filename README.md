@@ -1,4 +1,4 @@
-# [Brtandtrust Theme](http://brandtrust.com/)
+# [Brandtrust Theme](http://brandtrust.com/)
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
