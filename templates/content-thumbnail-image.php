@@ -1,4 +1,5 @@
 <?php
+        $class = "img-responsive";
         $image = get_field('thumbnail');
 
         if( !empty($image) ):
@@ -17,7 +18,7 @@
 
     <div class="thumbnail-image">
       <div class="thumbnail-inner">
-          <img class="img-responsive" src="<?php echo $thumb; ?>">
+          <img class="<?php echo $class; ?>" src="<?php echo $thumb; ?>">
       </div>
     </div>
 <?php endif; ?>

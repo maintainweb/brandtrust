@@ -32,5 +32,5 @@ endif;
 ?>
 <div class="video-shortcode">
 		<h2 class="video-title"><?php echo $videotitle; ?></h2>
-    <?php echo do_shortcode('[video width="'.$videowidth.'" height="'.$videoheight.'" mp4="'. $videomp4url.'" poster="'. $videoposterurl.'"][/video]'); ?>
+    <?php echo do_shortcode('[video width="'.$videowidth.'" height="'.$videoheight.'" mp4="'.$videomp4url.'" mov="' .$videomovurl. '" poster="'.$videoposterurl.'"][/video]'); ?>
 </div>

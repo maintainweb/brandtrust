@@ -2,6 +2,16 @@
 global $post;
 
 $posts = get_field('sidebar_items');
+$clientpage = 425;
+$teampage = 426;
+
+if (is_post_type_archive('client') || is_page_template('template-clients.php')) {
+  $posts = get_field('sidebar_items', $clientpage);
+}
+
+if (is_post_type_archive('team') || is_page_template('template-team.php')) {
+  $posts = get_field('sidebar_items', $teampage);
+}
 
 if( $posts ): ?>
     <ul>
